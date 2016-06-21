@@ -1,3 +1,7 @@
+(autoload 'php-mode "/home/qincong/.emacs.d/php-mode" "Major mode for editing php code." t)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
+
 (fset 'qwerb
    [return ?< ?% ?  ?  ?% ?>])
 (fset 'qwnerb
@@ -83,3 +87,9 @@ nil 0 nil "_NET_WM_STATE" 32
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+
+;;解决python下company无法使用的bug
+(add-hook 'python-mode-hook
+                 '(lambda ()
+                   (setq-local completion-at-point-functions nil)))
