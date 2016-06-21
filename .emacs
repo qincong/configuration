@@ -1,4 +1,4 @@
-(autoload 'php-mode "/home/qincong/.emacs.d/php-mode" "Major mode for editing php code." t)
+(autoload 'php-mode "～/.emacs.d/php-mode" "Major mode for editing php code." t)
 (add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
 
@@ -66,7 +66,7 @@ nil 0 nil "_NET_WM_STATE" 32
  (window-numbering-mode 1)
 
 ;;set company 
-(add-to-list 'load-path "/home/qincong/.emacs.d/elpa/company-0.8.12")
+(add-to-list 'load-path "～/.emacs.d/elpa/company-0.8.12")
 (autoload 'company-mode "company" nil t)
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
